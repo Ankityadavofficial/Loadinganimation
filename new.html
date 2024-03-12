@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(225, 255, 255, 1);
+            opacity: 0;
+            animation: body 2s 2s linear;
+            animation-fill-mode: forwards;
+        }
+        @keyframes body{
+            0%,70%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .parent {
+            width: 100%;
+            height: 100vh;
+            margin: auto;
+            /* border: 1px red solid; */
+        }
+
+        .mobile {
+            /* border: 1px red solid; */
+            position: absolute;
+            top: 36%;
+            left: 90%;
+            animation: mobile 10s 4s linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes mobile {
+
+            0%,
+            60% {
+                top: 36%;
+                left: 90%;
+                transform: scale(1) rotate(0deg);
+            }
+
+            100% {
+                top: 40%;
+                left: 40%;
+                transform: scale(2.5) rotate(-410deg);
+            }
+        }
+
+        .bike {
+            position: absolute;
+            top: 36%;
+            left: 90%;
+            z-index: 1;
+            transform: scale(0);
+            animation: bike 10s 4s linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes bike {
+            0% {
+                top: 36%;
+                left: 90%;
+                transform: scale(0);
+            }
+
+            20% {
+                top: 36%;
+                left: 90%;
+                transform: scale(1.3);
+            }
+
+            100% {
+                top: 36%;
+                left: -50%;
+                transform: scale(1.3);
+            }
+        }
+
+        .container {
+            width: 500px;
+            font-weight: 800;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 40px;
+            /* border: 1px red solid; */
+            color: rgb(133, 175, 7);
+            position: absolute;
+            top: 39%;
+            left: 40%;
+            opacity: 0;
+            animation: container 10s 4650ms linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes container {
+            0% {
+                top: 39%;
+                left: 40%;
+                opacity: 0;
+            }
+
+            50% {
+                top: 39%;
+                left: 40%;
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+                left: -50%;
+            }
+        }
+
+        .hidden {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /* border: 1px blue solid; */
+            background-color: rgba(225, 255, 255, 1);
+            top: 0%;
+            left: -100%;
+            animation-fill-mode: forwards;
+            /* transform-origin: right center; */
+            animation: hidden 5300ms 4s linear;
+        }
+
+        @keyframes hidden {
+
+            0%,
+            60% {
+                left: 0%;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
+        .comment {
+            width: 100%;
+            height: 100%;
+            font-size: 250px;
+            position: absolute;
+            top: -7%;
+            left: 6%;
+            transform: scale(0) rotate(50deg);
+            animation: comment 10s 6s linear;
+            animation-fill-mode: forwards;
+
+            h1 {
+                width: 180px;
+                /* border: 1px red solid; */
+                font-size: 30px;
+                position: absolute;
+                top: 45%;
+                color: orange;
+                left: 33%;
+            }
+
+            h3 {
+                width: 220px;
+                /* border: 1px red solid; */
+                font-size: 23px;
+                position: absolute;
+                top: 70%;
+                left: 20%;
+            }
+        }
+
+        .asd {
+            width: 200px;
+            position: absolute;
+            top: 88%;
+            color: gray;
+            left: 25%;
+            font-size: 14px;
+        }
+
+        @keyframes comment {
+
+            0%,
+            90% {
+                top: -7%;
+                left: 6%;
+                transform: scale(0) rotate(50deg);
+
+            }
+
+            100% {
+                top: -10%;
+                left: 90%;
+                transform: scale(.5) rotate(50deg);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="mobile">
+            <div class="comment"><i class="fa-regular fa-comment"></i>
+                <h1>Hii Everyone</h1>
+                <h3>Welcome To Zwiggy</h3>
+                <div class="asd">Thankyou for download zwiggy&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & Enjoy your
+                    food</div>
+            </div><img src="Images/mobile-app-for-drivers__FillWzY2Niw4MTBd.webp" width="130" alt="">
+        </div>
+        <div class="bike"><img src="Images/bike1.png" width="130" alt=""></div>
+        <div class="container"><span>Weclome To Zwiggy</span>
+            <div class="hidden"></div>
+        </div>
+    </div>
+</body>
+
+</html>
